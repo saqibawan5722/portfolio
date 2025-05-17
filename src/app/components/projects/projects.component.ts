@@ -29,7 +29,7 @@ export class ProjectsComponent {
       title: 'Portfolio Website',
       description: 'My own responsive portfolio website made with Angular.',
       image: 'assets/projects/portfolio.png',
-      link: 'https://your-live-link.com',
+      link: 'https://portfolio-f4e35.web.app',
       disabled: false
     }
   ];
