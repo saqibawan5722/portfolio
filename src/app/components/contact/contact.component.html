@@ -1,0 +1,49 @@
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contact-form" novalidate>
+
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" ngModel required #name="ngModel" />
+                <div *ngIf="name.invalid && name.touched" class="error">Name is required.</div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" ngModel required email #email="ngModel" />
+                <div *ngIf="email.invalid && email.touched" class="error">
+                    A valid email is required.
+                </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="4" ngModel required #message="ngModel"></textarea>
+                <div *ngIf="message.invalid && message.touched" class="error">
+                    Message is required.
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" [disabled]="!contactForm.valid">
+                Send Message
+            </button>
+        </form>
+
+        <!-- Success Message -->
+        <div *ngIf="successMessage" class="success-message">
+            {{ successMessage }}
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,60 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* padding-top: 80px; */
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #22c55e;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.contact-btn {
+    background: #7c3aed;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background: #5b21b6;
+}
+
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #4CAF50;
+    /* Attractive hover background */
+    color: #fff;
+    /* White text on hover */
+}

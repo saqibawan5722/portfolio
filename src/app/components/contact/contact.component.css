@@ -1,0 +1,113 @@
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+}
+
+.section-title {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form .form-group {
+    margin-bottom: 18px;
+    width: 80%;
+    /* Reduce input width to 80% */
+    max-width: 400px;
+    /* Prevent it from stretching too wide on large screens */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+    outline: none;
+}
+
+.submit-btn {
+    width: fit-content;
+    padding: 12px 28px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.required {
+    color: red;
+    margin-left: 4px;
+}
+
+.error {
+    color: #e11d48;
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+}
+
+.success-message {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid #10b981;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid #ef4444;
+    border-radius: 4px;
+    font-weight: 500;
+}

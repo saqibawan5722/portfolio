@@ -1,0 +1,18 @@
+<section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-subtitle">Some of the work I've done recently</p>
+
+    <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+            <img style="height: 40px;" [src]="project.image" alt="Project Image" />
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a *ngIf="!project.disabled" [href]="project.link" target="_blank" class="btn">
+                View Project
+            </a>
+            <button *ngIf="project.disabled" class="btn disabled-btn" disabled>
+                Coming Soon
+            </button>
+        </div>
+    </div>
+</section>
