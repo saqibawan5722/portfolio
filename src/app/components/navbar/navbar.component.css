@@ -1,4 +1,4 @@
-
+/* Base styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -9,27 +9,45 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* padding-top: 80px; */
+    flex-wrap: wrap;
 }
 
-.navbar .logo {
+/* Logo */
+.logo {
     font-weight: bold;
     font-size: 24px;
     color: #22c55e;
 }
 
-.navbar .menu {
+/* Hamburger (mobile only) */
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Menu */
+.menu {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-.navbar .menu li a {
+.menu li a {
+    color: #333;
     text-decoration: none;
-    color: #111;
+    padding: 8px 16px;
+    border-radius: 8px;
     font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.menu li a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Contact Button */
 .contact-btn {
     background: #7c3aed;
     color: white;
@@ -43,18 +61,34 @@
     background: #5b21b6;
 }
 
-
-.menu li a {
-    color: #333;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+/* Desktop only button */
+.desktop-only {
+    display: block;
 }
 
-.menu li a:hover {
-    background-color: #4CAF50;
-    /* Attractive hover background */
-    color: #fff;
-    /* White text on hover */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding-top: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .desktop-only {
+        display: none;
+    }
 }

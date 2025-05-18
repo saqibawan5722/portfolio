@@ -1,8 +1,7 @@
 <section id="projects" class="projects-section">
     <h2 class="section-title">My Projects</h2>
     <p class="section-subtitle">Some of the work I've done recently</p>
-
-    <div class="projects-grid">
+    <div class="projects-container">
         <div class="project-card" *ngFor="let project of projects">
             <img style="height: 40px;" [src]="project.image" alt="Project Image" />
             <h3>{{ project.title }}</h3>

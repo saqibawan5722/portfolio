@@ -15,4 +15,15 @@ export class NavbarComponent {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
 }

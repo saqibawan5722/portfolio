@@ -1,3 +1,4 @@
+/* 🌐 Section Background & Centering */
 .contact-section {
     padding: 60px 20px;
     background-color: #f5f7fa;
@@ -6,15 +7,17 @@
     align-items: center;
 }
 
+/* 🧾 Main Container */
 .contact-container {
-    max-width: 600px;
     width: 100%;
+    max-width: 600px;
     background: #ffffff;
     padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
 }
 
+/* 🏷️ Section Heading */
 .section-title {
     font-size: 26px;
     text-align: center;
@@ -23,20 +26,20 @@
     color: #2d3748;
 }
 
+/* 📋 Form Layout */
 .contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 18px;
+    width: 100%;
 }
 
-.contact-form .form-group {
-    margin-bottom: 18px;
-    width: 80%;
-    /* Reduce input width to 80% */
-    max-width: 400px;
-    /* Prevent it from stretching too wide on large screens */
+/* 🧩 Each Field Group */
+.form-group {
+    width: 100%;
 }
 
+/* 🏷️ Label */
 .contact-form label {
     display: block;
     margin-bottom: 6px;
@@ -44,16 +47,20 @@
     color: #4a5568;
 }
 
+/* ✏️ Inputs & Textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px 14px;
+    padding: 12px 16px;
     border: 1px solid #cbd5e0;
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 15px;
     transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
+/* 🔍 Focus Styles */
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #6c63ff;
@@ -61,53 +68,99 @@
     outline: none;
 }
 
+/* ✅ Submit Button */
 .submit-btn {
-    width: fit-content;
     padding: 12px 28px;
     background-color: #6c63ff;
     color: #fff;
     border: none;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    align-self: center;
+    /* ✅ Center the button */
+    display: inline-block;
+    /* ✅ Prevent full width */
     margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     transform: translateY(-2px);
 }
 
+
+/* 🟥 Required Star */
 .required {
     color: red;
     margin-left: 4px;
 }
 
+/* ❌ Error Messages */
 .error {
     color: #e11d48;
     font-size: 14px;
     margin-top: 4px;
-    display: block;
 }
 
+/* ✅ Success Message Box */
 .success-message {
     background-color: #d1fae5;
     color: #065f46;
     padding: 12px 16px;
-    margin-bottom: 16px;
+    margin-top: 20px;
     border-left: 4px solid #10b981;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 500;
 }
 
+/* ❌ Error Message Box */
 .error-message {
     background-color: #fee2e2;
     color: #991b1b;
     padding: 12px 16px;
-    margin-bottom: 16px;
+    margin-top: 20px;
     border-left: 4px solid #ef4444;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 500;
+}
+
+/* 📱 Fully Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 25px 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
 }
